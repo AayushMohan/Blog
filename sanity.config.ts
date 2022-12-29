@@ -1,4 +1,4 @@
-import { defineConfig } from "sanity";
+import { defineConfig, StudioNavbar } from "sanity";
 import { deskTool } from 'sanity/desk';
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from './schemas';
@@ -21,5 +21,11 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+  studio:{
+    components:{
+      logo: Logo,
+      navbar: StudioNavbar,
+    }
+  },
   theme: myTheme,
-})
+});
