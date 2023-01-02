@@ -1,3 +1,5 @@
+import "../styles/globals.css";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,6 +7,8 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      {/* Header */}
+      {/* Banner */}
       <body>{children}</body>
     </html>
   );
