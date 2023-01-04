@@ -1,3 +1,4 @@
+import Header from "../../components/Header";
 import "../styles/globals.css";
 
 export default function RootLayout({
@@ -8,6 +9,7 @@ export default function RootLayout({
   return (
     <html>
       {/* Header */}
+      <Header />
       {/* Banner */}
       <body>{children}</body>
     </html>
