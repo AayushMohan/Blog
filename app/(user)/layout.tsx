@@ -10,8 +10,8 @@ export default function RootLayout({
     <html>
       <body>
         {/* Header */}
-        {/* Banner */}
         <Header />
+        {/* Banner */}
         {children}
       </body>
     </html>
