@@ -29,3 +29,9 @@ interface Image{
   _type: "image";
   asset: Reference
 }
+
+interface Reference{
+  _ref: string;
+  _type: "reference";
+}
+
