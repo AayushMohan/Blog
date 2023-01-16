@@ -1,3 +1,5 @@
+import { Reference } from "sanity";
+
 type Base ={
  _createdAt: string;
  _id: string;
@@ -23,3 +25,7 @@ interface Author extends Base {
   slug: string;
 }
 
+interface Image{
+  _type: "image";
+  asset: Reference
+}
