@@ -64,3 +64,8 @@ interface MainImage{
   _type: "image";
   assets: Reference;
 }
+
+interface Title{
+  _type: "string";
+  current: string;
+}
