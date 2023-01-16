@@ -1,18 +1,18 @@
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import urlFor from "../lib/urlFor";
-import post from "../schemas/post";
 import { Post } from "../typings";
 
 type Props = {
   posts: Post[];
 };
 
-const BlogList = ({ posts }: Props) => {
+function BlogList({ posts }: Props) {
   return (
     <div>
       <hr className="border-[#F7AB0A] mb-10" />
 
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
         {/* Posts */}
         {posts.map((post) => (
           <div key={post._id} className="flex flex-col group cursor-pointer">
@@ -36,11 +36,11 @@ const BlogList = ({ posts }: Props) => {
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
-                  {post.categories.map((category) => (
+                  {/* {post.categories.map((category) => (
                     <div className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
                       <p>{category.title}</p>
                     </div>
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>
@@ -48,11 +48,15 @@ const BlogList = ({ posts }: Props) => {
               <p className="underline text-lg font-bold">{post.title}</p>
               <p className="line-clamp-2 text-gray-500">{post.description}</p>
             </div>
+            <p className="mt-5 font-bold flex items-center group-hover:underline">
+              Read Post
+              <ArrowRightIcon className="ml-2 h-4 w-4" />
+            </p>
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default BlogList;
