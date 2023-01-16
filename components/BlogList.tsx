@@ -23,6 +23,12 @@ const BlogList = ({ posts }: Props) => {
                 alt={post.author.name}
                 fill
               />
+              <div>
+                <div>
+                  <p className="font-bold">{post.title}</p>
+                  <p></p>
+                </div>
+              </div>
             </div>
           </div>
         ))}
